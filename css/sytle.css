@@ -1,0 +1,136 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    font-weight: normal;
+}
+
+.nav-link {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link li {
+    display: inline;
+}
+
+.nav-link a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link a:hover {
+    color: #FFD700; /* Cor dourada ao passar o mouse */
+}
+
+/* Estilo do conteúdo principal */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da introdução */
+.intro {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px; /* Espaço entre texto e imagem */
+}
+
+/* Container do texto (esquerda) */
+.text-content {
+    flex: 1;
+    max-width: calc(100% - 200px); /* Garante espaço para a imagem */
+}
+
+/* Título centralizado */
+.intro h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007BFF; /* Adicionei cor para destacar */
+}
+
+/* Parágrafos alinhados à esquerda */
+.intro p {
+    text-align: left;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Container da imagem (direita) */
+.intro figure {
+    flex-shrink: 0;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza a imagem horizontalmente */
+    margin: 0;
+}
+
+.intro img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #007BFF;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+    
+    .text-content {
+        max-width: 100%;
+        order: 1;
+    }
+    
+    .intro figure {
+        order: 2;
+        margin: 20px auto 0;
+    }
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007BFF;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
